@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-<<<<<<< HEAD
-=======
-import { ThemeProvider } from "@/components/theme-provider";
-import { Toaster } from "@/components/ui/sonner";
->>>>>>> origin/main
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,7 +13,6 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-<<<<<<< HEAD
   title: "Universidades | Campus",
   description: "Gerencie universidades conectadas à API.",
 };
@@ -33,28 +27,3 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     </html>
   );
 }
-=======
-  title: "Sistema de Universidades",
-  description: "CRUD de Universidades - Next.js + shadcn/ui",
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{ children: React.ReactNode }>) {
-  return (
-    <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-          <Toaster position="top-right" />
-        </ThemeProvider>
-      </body>
-    </html>
-  );
-}
->>>>>>> origin/main
